@@ -1,5 +1,5 @@
 from random import choice, uniform, randint
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 
 from app.common.utils import generate_uuid
 from app.producer.schemas import TransactionEvent
@@ -37,5 +37,5 @@ def generate_transaction() -> TransactionEvent:
         country=country,
         city=city,
         device_id=f"DEVICE_{randint(1, 100):03}",
-        timestamp=datetime.now(UTC),
+        timestamp=datetime.now(timezone.utc),
     )
