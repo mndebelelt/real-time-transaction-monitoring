@@ -41,3 +41,8 @@ def run_consumer():
             transaction["amount"],
             transaction["merchant"],
         )
+        
+        
+if __name__ == "__main__":
+    configure_logging(settings.log_level)
+    run_consumer()
