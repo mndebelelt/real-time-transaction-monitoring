@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Database / local temp
+*.sqlite3
+
+# Misc
+.coverage
+htmlcov/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+
+# Virtual env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Docker
+*.pid
+
+# Data
+*.csv
+*.db
