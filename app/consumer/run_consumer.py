@@ -5,14 +5,13 @@ from confluent_kafka import Consumer
 
 from app.common.config import settings
 from app.common.logging_config import configure_logging
-from app.consumer.fraud_detector import FraudDetector
+from app.consumer.fraud_detector import evaluate_transaction
 
 logger = logging.getLogger(__name__)
 
 
 def run_consumer():
-    
-    fraud_detector = FraudDetector()
+
 
     consumer = Consumer({
         "bootstrap.servers": settings.kafka_bootstrap_servers,
@@ -37,7 +36,7 @@ def run_consumer():
 
         transaction = json.loads(msg.value().decode("utf-8"))
 
-        alerts = fraud_detector.process(transaction)
+        alerts = evaluate_transaction(transaction)
 
         if alerts:
             for alert in alerts:
