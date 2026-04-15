@@ -1,53 +1,86 @@
-# Real-Time Transaction Monitoring
+# Real-Time Transaction Monitoring System
 
-A local streaming data engineering project built with Python, Kafka, and PostgreSQL.
+A real-time fraud detection pipeline built using Python, Kafka, and Azure.
 
-## Overview
+This project simulates financial transactions, streams them through Kafka, and processes them in real-time to detect potential fraud using rule-based logic.
 
-This project simulates transaction events, streams them through Kafka, evaluates suspicious activity in near real time, and stores both transactions and generated alerts in PostgreSQL.
+---
 
-## Goals
+## 🧱 Architecture
 
-- Learn streaming fundamentals
-- Practice Kafka producers and consumers
-- Build a clean Python data engineering project
-- Store and analyze streaming events
-- Create a strong GitHub portfolio project
+Producer → Kafka → Consumer → Fraud Detection → (PostgreSQL - planned)
 
-## Tech Stack
+- Producer generates fake transactions
+- Kafka streams events in real-time
+- Consumer processes transactions
+- Fraud Engine applies detection rules
+
+---
+
+## ⚙️ Tech Stack
 
 - Python
-- Kafka
-- PostgreSQL
-- Docker Compose
-- Pytest
+- Apache Kafka
+- Docker (Kafka, Zookeeper, PostgreSQL)
+- Azure Virtual Machine
+- Bicep (Infrastructure as Code)
+- Faker (data simulation)
 
-## Planned Features
+---
 
-- Transaction generator
-- Kafka producer
-- Kafka consumer
-- Rule-based alert detection
-- PostgreSQL persistence
-- Tests
-- Documentation
-- Dashboard later
+## 🚀 How It Works
 
-## Project Structure
+1. Transactions are generated using Faker
+2. Producer publishes transactions to Kafka
+3. Consumer reads messages in real-time
+4. Fraud rules are applied:
+   - High transaction amounts
+   - Suspicious country changes
+   - Rapid transaction frequency
+5. Alerts are logged for suspicious activity
 
-```text
-real-time-transaction-monitoring/
-│
-├── app/
-│   ├── producer/
-│   ├── consumer/
-│   └── common/
-│
-├── database/
-├── docker/
-├── tests/
-├── docs/
-├── requirements.txt
-├── .env.example
-├── .gitignore
-└── README.md
+---
+
+## ▶️ Running the Project
+
+This project can run:
+
+### Option 1: Locally
+- Start Docker services
+- Run producer and consumer
+
+### Option 2: Azure VM (recommended for low-resource machines)
+- Deploy VM using Bicep
+- SSH into VM
+- Start Docker services
+- Run producer and consumer
+
+For detailed steps, see RUNBOOK.md
+
+---
+
+## 🧠 Key Learnings
+
+- Built an event-driven architecture using Kafka
+- Implemented real-time fraud detection logic
+- Used Docker for reproducible environments
+- Deployed infrastructure using Bicep (IaC)
+- Managed cloud resources using ephemeral environments
+- Debugged distributed systems (producer/consumer/Kafka)
+
+---
+
+## 🚀 Future Improvements
+
+- Persist transactions and alerts to PostgreSQL
+- Add fraud scoring engine (not just rules)
+- Build real-time dashboards
+- Migrate to Azure Container Apps
+- Add CI/CD pipelines (GitHub Actions / Azure DevOps)
+
+---
+
+## 📌 Author
+
+Thabo Mndebele  
+Software Engineer | Data Engineering Enthusiast
