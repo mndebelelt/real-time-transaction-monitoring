@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "projectName": {
+      "value": "rttm"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "vmSize": {
+      "value": "Standard_B2s"
+    },
+    "sshPublicKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqhUTED0wpnpSNkfkfkl8xjitu78x/6JXLZt1w3MKizGytywuB67uVOgph+m7qI/KOkcXTVfxWYWWTW1oouhgFhqD2biVbWW647YtJefsItMA0QVhOoFZVzwpFDzyqu6zb6elZ2JD/QraI23p3g35xEruKVOYDHcB78MSFA+miO38hR+0M1YgHXB5A5vTdmuKWjZCsRKQh1wKu0QwfNLIAqQIFsr1mQwPh9JnuUFNDEYYbVdBaHmxakzDU7i7hmo2wK8zIFlYTYr1g2S3Uh+SjZfyQ1619hfy9oqo2OSgYl93iP0Ay01F+9i2uDtErz1zd73GBkJ0AbjCBShuxmFVY4Fz6GbwQCXJbnILzAEsB3fYaBmLj2JThZVj+APVOMqy3uURIj+zjQPvmR4swoh0EBOPvvqzGAQwznDuP1RRV7u6dKW+KP8erVBbs8M3jBASagulZ0pjID83UW775ev3UoEcxv+3elKx/cJyikSa/YxOy4Otr9bYeuMlozRNvHq4e1UNKs5e1TKUGUCCS3KGQ32ZDTO03KBTGzHX/G/eBCmTdEGPRhIuDRhvGvb7VYBysSrvl3Ck1PQ3Yy313mk5aYDsn4BwZJ0xg6LRinoJCDDC2JNL0KuIV0lbjCABO2o12Lf4uHuAlVmf/eYEzwInfVVhA/O4dpnOtuX+1jz9tjw== mndeb@LAPTOP-DOG1VMRJ"
+    }
+  }
+}
