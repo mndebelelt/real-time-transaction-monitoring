@@ -52,8 +52,12 @@ This project can run:
 ### Option 2: Azure VM (recommended for low-resource machines)
 - Deploy VM using Bicep
 - SSH into VM
-- Start Docker services
-- Run producer and consumer
+- Clone repo on the VM
+- Make the bootstrap script executable: `chmod +x ./infra/bootstrap-vm.sh`
+- Run the VM bootstrap script: `./infra/bootstrap-vm.sh`
+  - Or from Windows PowerShell run: `.
+\infra\bootstrap-vm.ps1 -PublicIp <PUBLIC_IP>`
+- Start producer and consumer
 
 For detailed steps, see RUNBOOK.md
 
@@ -84,3 +88,5 @@ For detailed steps, see RUNBOOK.md
 
 Thabo Mndebele  
 Software Engineer | Data Engineering Enthusiast
+
+
